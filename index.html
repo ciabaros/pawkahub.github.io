@@ -1,0 +1,119 @@
+<template id="wn-select">
+  <style>
+    :host {
+      display: flex;
+    }
+
+    #wn-select-wrapper {
+      position: relative;
+      background-color: #fff;
+      border: 1px solid var(--wn-gray-color);
+      border-radius: 40px;
+    }
+
+    #wn-select-el {
+      background-color: transparent;
+      border: none;
+      appearance: none;
+      outline: none;
+      width: inherit;
+      height: 100%;
+      padding: 1rem 2.6rem 1rem 1rem;
+    }
+
+    #wn-select-icon {
+      width: 24px;
+      height: 24px;
+      background-color: var(--wn-brand-color);
+      position: absolute;
+      top: 50%;
+      right: 0.6rem;
+      margin-top: -12px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 22px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    #wn-select-icon:before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      right: 6px;
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+      border-color: #fff transparent transparent transparent;
+    }
+
+    :host-context(.column) {
+      height: 100%;
+    }
+
+    :host-context(.pretend-component) #wn-select-wrapper {
+      border: none;
+    }
+  </style>
+  <div id="wn-select-wrapper">
+    <select id="wn-select-el">
+      <option value="0">Loading Options...</option>
+    </select>
+    <div id="wn-select-icon"></div>
+  </div>
+</template>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="card">
+      <h1>Users API Select Example</h1>
+      <wn-select id="users-select"></wn-select>
+    </section>
+
+    <section class="card">
+      <h1>Arbitrary Alternative Select In a Different UI Context Example</h1>
+      <div class="pretend-component">
+        <div class="row header">
+          <div class="column">
+            <h2>Test Header One</h2>
+          </div>
+          <div class="column">
+            <h2>Test Header Two</h2>
+          </div>
+          <div class="column">
+            <h2>Test Header Three</h2>
+          </div>
+          <div class="column">
+            <h2>Test Header Four</h2>
+          </div>
+          <div class="column">
+            <h2>Test Header Five</h2>
+          </div>
+        </div>
+        <div class="row body">
+          <div class="column">
+            <p>Some test data</p>
+          </div>
+          <div class="column">
+            <wn-select id="some-other-select"></wn-select>
+          </div>
+          <div class="column">
+            <p>Even more test data</p>
+          </div>
+          <div class="column">
+            <wn-select id="arbitrary-options-select"></wn-select>
+          </div>
+          <div class="column">
+            <p>And some more test data</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="exercise.js"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+/* Example - Basic Generic Variables */
+:root {
+  --wn-font-size-baseline: 1rem;
+  --wn-font-size-sm: 0.889rem;
+  --wn-font-size-xsm: 0.778rem;
+  --wn-font-size-lg: 1.333rem;
+  --wn-font-size-xlg: 2rem;
+
+  --wn-line-height-baseline: 1.4;
+
+  --wn-brand-color: #156b82;
+  --wn-dark-color: #34495e;
+  --wn-gray-color: #95a5a6;
+  --wn-light-color: #f5f5f5;
+}
+
+/* Example - Basic Layout Resets */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: var(--wn-font-size-baseline);
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--wn-dark-color);
+}
+
+input, button, select, textarea {
+  outline: none;
+  border: none;
+  background: transparent;
+  appearance: none;
+}
+
+input, select, textarea {
+  font-size: var(--wn-font-size-baseline);
+}
+
+select {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  line-height: var(--wn-line-height-baseline);
+  margin: 0;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+}
+
+.card {
+  background: var(--wn-light-color);
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 4px;
+}
+
+.card h1 {
+  font-size: var(--wn-font-size-lg);
+  margin-bottom: 1rem;
+}
+
+.pretend-component {
+  border-bottom: 5px solid var(--wn-gray-color);
+  font-size: var(--wn-font-size-sm);
+}
+
+.pretend-component .header {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: var(--wn-brand-color);
+}
+
+.pretend-component .body {
+  background: #fff;
+}
+
+.pretend-component .column {
+  display: flex;
+  align-items: center;
+}
+
+.pretend-component .column h2 {
+  padding: 1rem 1rem;
+  font-size: var(--wn-font-size-sm);
+  color: #fff;
+}
+
+.pretend-component .column p {
+  padding: 0.5rem 1rem;
+}
